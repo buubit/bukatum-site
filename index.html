@@ -48,6 +48,8 @@ section{padding:56px 0}
 .resumo span:last-child{color:var(--suave)}
 /* campeões */
 .campeoes{background:linear-gradient(180deg,var(--ceu2),var(--fundo))}
+.inimigos{background:linear-gradient(180deg,#ece6ff,var(--fundo))}
+.subt-ini{font-family:"Lilita One",sans-serif;font-weight:400;font-size:24px;margin:26px 0 12px}
 .lista-camp{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
 .camp{background:var(--card);border:3px solid var(--borda);border-radius:22px;box-shadow:var(--sombra);overflow:hidden;display:grid;grid-template-rows:auto 1fr}
 .camp-foto{all:unset;box-sizing:border-box;position:relative;display:block;width:100%;aspect-ratio:4/5;max-height:420px;background:#241d52;cursor:pointer;overflow:hidden}
@@ -160,6 +162,71 @@ footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3
   <p class="breve">+4 campeões chegando: suportes que curam e fortalecem a equipe, e um de farm.</p>
 </div></section>
 
+<section class="inimigos"><div class="wrap">
+  <h2 class="tit">Inimigos</h2>
+  <p class="sub">Soldados Pó invadem o campo pra apanhar da sua equipe. De vez em quando aparece um Guardião do Dragão: bem mais forte, mas paga muito mais. Toque pra ver os golpes.</p>
+  <h3 class="subt-ini">Soldados Pó · farm</h3>
+  <div class="lista-camp"><article class="camp" style="--cor:#3a3a48" data-u="SoldadoPoEspada">
+  <button class="camp-foto" aria-label="Ver os golpes de Soldado Pó"><video src="video/idle_SoldadoPoEspada.mp4" poster="video/idle_SoldadoPoEspada.jpg" autoplay muted loop playsinline preload="auto" aria-label="Soldado Pó andando"></video><span class="play">▶ Ver golpes</span></button>
+  <div class="camp-info">
+    <span class="selo">Farm · espada</span>
+    <h3>Soldado Pó</h3>
+    <p class="anime">Soldadinho preto de máscara de caveira. Corta de perto.</p>
+    <p class="golpe">Golpe: <b>Corte de espada</b></p>
+  </div>
+</article><article class="camp" style="--cor:#3a3a48" data-u="SoldadoPoPistola">
+  <button class="camp-foto" aria-label="Ver os golpes de Soldado Pó Atirador"><video src="video/idle_SoldadoPoPistola.mp4" poster="video/idle_SoldadoPoPistola.jpg" autoplay muted loop playsinline preload="auto" aria-label="Soldado Pó Atirador andando"></video><span class="play">▶ Ver golpes</span></button>
+  <div class="camp-info">
+    <span class="selo">Farm · pistola</span>
+    <h3>Soldado Pó Atirador</h3>
+    <p class="anime">Mesmo soldado, atira de longe.</p>
+    <p class="golpe">Golpe: <b>Rajada de tiros</b></p>
+  </div>
+</article></div>
+  <h3 class="subt-ini">Elite · Guardiões do Dragão</h3>
+  <div class="lista-camp"><article class="camp" style="--cor:#ff2d2d" data-u="GuardiaoVermelho">
+  <button class="camp-foto" aria-label="Ver os golpes de Guardião Vermelho"><video src="video/idle_GuardiaoVermelho.mp4" poster="video/idle_GuardiaoVermelho.jpg" autoplay muted loop playsinline preload="auto" aria-label="Guardião Vermelho andando"></video><span class="play">▶ Ver golpes</span></button>
+  <div class="camp-info">
+    <span class="selo">Elite · espada</span>
+    <h3>Guardião Vermelho</h3>
+    <p class="anime">O líder (Sosei Akabane no anime). Especial: dragão Orochi de energia em linha.</p>
+    <p class="golpe">Especial: <b>Dragão Orochi</b></p>
+  </div>
+</article><article class="camp" style="--cor:#3c78ff" data-u="GuardiaoAzul">
+  <button class="camp-foto" aria-label="Ver os golpes de Guardião Azul"><video src="video/idle_GuardiaoAzul.mp4" poster="video/idle_GuardiaoAzul.jpg" autoplay muted loop playsinline preload="auto" aria-label="Guardião Azul andando"></video><span class="play">▶ Ver golpes</span></button>
+  <div class="camp-info">
+    <span class="selo">Elite · lança</span>
+    <h3>Guardião Azul</h3>
+    <p class="anime">Shougo Aoshima no anime, ataques de água. Especial: onda de água em volta.</p>
+    <p class="golpe">Especial: <b>Onda de água</b></p>
+  </div>
+</article><article class="camp" style="--cor:#ffd228" data-u="GuardiaoAmarelo">
+  <button class="camp-foto" aria-label="Ver os golpes de Guardião Amarelo"><video src="video/idle_GuardiaoAmarelo.mp4" poster="video/idle_GuardiaoAmarelo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Guardião Amarelo andando"></video><span class="play">▶ Ver golpes</span></button>
+  <div class="camp-info">
+    <span class="selo">Elite · arco</span>
+    <h3>Guardião Amarelo</h3>
+    <p class="anime">Shinya Kiritani no anime, poderes de eletricidade. Atira de longe; especial: raios caindo nas unidades.</p>
+    <p class="golpe">Especial: <b>Chuva de raios</b></p>
+  </div>
+</article><article class="camp" style="--cor:#3cc850" data-u="GuardiaoVerde">
+  <button class="camp-foto" aria-label="Ver os golpes de Guardião Verde"><video src="video/idle_GuardiaoVerde.mp4" poster="video/idle_GuardiaoVerde.jpg" autoplay muted loop playsinline preload="auto" aria-label="Guardião Verde andando"></video><span class="play">▶ Ver golpes</span></button>
+  <div class="camp-info">
+    <span class="selo">Elite · martelo</span>
+    <h3>Guardião Verde</h3>
+    <p class="anime">Chidori no anime, martelo gigante. Especial: fica gigante e bate em área com dano dobrado.</p>
+    <p class="golpe">Especial: <b>Gigante</b></p>
+  </div>
+</article><article class="camp" style="--cor:#ff64aa" data-u="GuardiaoRosa">
+  <button class="camp-foto" aria-label="Ver os golpes de Guardiã Rosa"><video src="video/idle_GuardiaoRosa.mp4" poster="video/idle_GuardiaoRosa.jpg" autoplay muted loop playsinline preload="auto" aria-label="Guardiã Rosa andando"></video><span class="play">▶ Ver golpes</span></button>
+  <div class="camp-info">
+    <span class="selo">Elite · botas</span>
+    <h3>Guardiã Rosa</h3>
+    <p class="anime">Sesera Sakurama no anime; a Ferramenta Divina dela são as botas, e ela se regenera. Chutes rápidos; especial: se cura.</p>
+    <p class="golpe">Especial: <b>Voadora</b></p>
+  </div>
+</article></div>
+</div></section>
+
 <section>
   <div class="wrap"><h2 class="tit">O mundo</h2>
   <p class="sub">5 zonas, cada uma com um chefe gigante e seu golpe especial. Arraste pro lado.</p></div>
@@ -215,7 +282,7 @@ footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3
   <div class="palco"><video muted playsinline preload="auto"></video></div>
   <div class="ficha-corpo"><div class="formas" role="group" aria-label="Formas"></div><div class="lista-golpes"></div></div>
 </dialog>
-<script>window.CAMP_DATA = {"Kakaroto": {"nome": "Kakaroto Saiyajin", "cor": "#ffc31e", "selo": "Lendário · DPS", "anime": "Dragon Ball", "formas": [{"rot": "Normal", "foto": "img/Kakaroto.webp", "idle": "video/idle_Kakaroto.mp4", "esp": "Genki Dama", "golpes": [{"v": "video/golpe_Kakaroto_combo.mp4", "p": "video/golpe_Kakaroto_combo.jpg", "t": "Combo + Genki Dama", "x": "Socos, golpe de ki e Kamehameha pequeno. Cada golpe enche a barra; cheia, ele pula e solta a Genki Dama."}]}, {"rot": "SSJ", "foto": "img/Kakaroto_SSJ.webp", "idle": "video/idle_Kakaroto_SSJ.mp4", "esp": "Kamehameha", "golpes": [{"v": "video/golpe_Kakaroto_SSJ_especial.mp4", "p": "video/golpe_Kakaroto_SSJ_especial.jpg", "t": "Kamehameha", "x": "Pula, carrega com as mãos do lado e solta o Kamehameha lá de cima."}]}, {"rot": "SS3", "foto": "img/Kakaroto_SS3.webp", "idle": "video/idle_Kakaroto_SS3.mp4", "esp": "Super Kamehameha", "golpes": [{"v": "video/golpe_Kakaroto_SS3_especial.mp4", "p": "video/golpe_Kakaroto_SS3_especial.jpg", "t": "Super Kamehameha", "x": "Um feixe bem mais largo, que segura por quase 2 segundos."}]}, {"rot": "SS4", "foto": "img/Kakaroto_SS4.webp", "idle": "video/idle_Kakaroto_SS4.mp4", "esp": "Kamehameha do Dragão", "golpes": [{"v": "video/golpe_Kakaroto_SS4_especial.mp4", "p": "video/golpe_Kakaroto_SS4_especial.jpg", "t": "Kamehameha do Dragão", "x": "Feixe vermelho com um dragão verde enrolado em volta."}]}]}, "CeifadorSubstituto": {"nome": "Ceifador Substituto", "cor": "#ffc31e", "selo": "Lendário · DPS", "anime": "Bleach", "formas": [{"rot": "Normal", "foto": "img/CeifadorSubstituto.webp", "idle": "video/idle_CeifadorSubstituto.mp4", "esp": "Getsuga Tenshou", "golpes": [{"v": "video/golpe_CeifadorSubstituto_golpe.mp4", "p": "video/golpe_CeifadorSubstituto_golpe.jpg", "t": "Corte em onda", "x": "Um corte que vira onda e acerta quem estiver na frente."}, {"v": "video/golpe_CeifadorSubstituto_especial.mp4", "p": "video/golpe_CeifadorSubstituto_especial.jpg", "t": "Getsuga Tenshou", "x": "Uma meia-lua gigante que corta tudo na linha."}]}, {"rot": "Mascarado", "foto": "img/CeifadorSubstituto_Mascara.webp", "idle": "video/idle_CeifadorSubstituto_Mascara.mp4", "esp": "Getsuga Negro", "golpes": [{"v": "video/golpe_CeifadorSubstituto_Mascara_especial.mp4", "p": "video/golpe_CeifadorSubstituto_Mascara_especial.jpg", "t": "Getsuga Negro", "x": "Meia-lua dupla, preta e vermelha."}]}]}, "CapitaoBorracha": {"nome": "Capitão de Borracha", "cor": "#af55ff", "selo": "Épico · DPS", "anime": "One Piece", "formas": [{"rot": "Normal", "foto": "img/CapitaoBorracha.webp", "idle": "video/idle_CapitaoBorracha.mp4", "esp": "Metralhadora", "golpes": [{"v": "video/golpe_CapitaoBorracha_golpe.mp4", "p": "video/golpe_CapitaoBorracha_golpe.jpg", "t": "Soco esticado", "x": "O braço estica até o inimigo."}, {"v": "video/golpe_CapitaoBorracha_especial.mp4", "p": "video/golpe_CapitaoBorracha_especial.jpg", "t": "Metralhadora", "x": "Uma rajada de socos esticados de uma vez."}]}]}};</script>
+<script>window.CAMP_DATA = {"Kakaroto": {"nome": "Kakaroto Saiyajin", "cor": "#ffc31e", "selo": "Lendário · DPS", "anime": "Dragon Ball", "formas": [{"rot": "Normal", "foto": "img/Kakaroto.webp", "idle": "video/idle_Kakaroto.mp4", "esp": "Genki Dama", "golpes": [{"v": "video/golpe_Kakaroto_combo.mp4", "p": "video/golpe_Kakaroto_combo.jpg", "t": "Combo + Genki Dama", "x": "Socos, golpe de ki e Kamehameha pequeno. Cada golpe enche a barra; cheia, ele pula e solta a Genki Dama."}]}, {"rot": "SSJ", "foto": "img/Kakaroto_SSJ.webp", "idle": "video/idle_Kakaroto_SSJ.mp4", "esp": "Kamehameha", "golpes": [{"v": "video/golpe_Kakaroto_SSJ_especial.mp4", "p": "video/golpe_Kakaroto_SSJ_especial.jpg", "t": "Kamehameha", "x": "Pula, carrega com as mãos do lado e solta o Kamehameha lá de cima."}]}, {"rot": "SS3", "foto": "img/Kakaroto_SS3.webp", "idle": "video/idle_Kakaroto_SS3.mp4", "esp": "Super Kamehameha", "golpes": [{"v": "video/golpe_Kakaroto_SS3_especial.mp4", "p": "video/golpe_Kakaroto_SS3_especial.jpg", "t": "Super Kamehameha", "x": "Um feixe bem mais largo, que segura por quase 2 segundos."}]}, {"rot": "SS4", "foto": "img/Kakaroto_SS4.webp", "idle": "video/idle_Kakaroto_SS4.mp4", "esp": "Kamehameha do Dragão", "golpes": [{"v": "video/golpe_Kakaroto_SS4_especial.mp4", "p": "video/golpe_Kakaroto_SS4_especial.jpg", "t": "Kamehameha do Dragão", "x": "Feixe vermelho com um dragão verde enrolado em volta."}]}]}, "CeifadorSubstituto": {"nome": "Ceifador Substituto", "cor": "#ffc31e", "selo": "Lendário · DPS", "anime": "Bleach", "formas": [{"rot": "Normal", "foto": "img/CeifadorSubstituto.webp", "idle": "video/idle_CeifadorSubstituto.mp4", "esp": "Getsuga Tenshou", "golpes": [{"v": "video/golpe_CeifadorSubstituto_golpe.mp4", "p": "video/golpe_CeifadorSubstituto_golpe.jpg", "t": "Corte em onda", "x": "Um corte que vira onda e acerta quem estiver na frente."}, {"v": "video/golpe_CeifadorSubstituto_especial.mp4", "p": "video/golpe_CeifadorSubstituto_especial.jpg", "t": "Getsuga Tenshou", "x": "Uma meia-lua gigante que corta tudo na linha."}]}, {"rot": "Mascarado", "foto": "img/CeifadorSubstituto_Mascara.webp", "idle": "video/idle_CeifadorSubstituto_Mascara.mp4", "esp": "Getsuga Negro", "golpes": [{"v": "video/golpe_CeifadorSubstituto_Mascara_especial.mp4", "p": "video/golpe_CeifadorSubstituto_Mascara_especial.jpg", "t": "Getsuga Negro", "x": "Meia-lua dupla, preta e vermelha."}]}]}, "CapitaoBorracha": {"nome": "Capitão de Borracha", "cor": "#af55ff", "selo": "Épico · DPS", "anime": "One Piece", "formas": [{"rot": "Normal", "foto": "img/CapitaoBorracha.webp", "idle": "video/idle_CapitaoBorracha.mp4", "esp": "Metralhadora", "golpes": [{"v": "video/golpe_CapitaoBorracha_golpe.mp4", "p": "video/golpe_CapitaoBorracha_golpe.jpg", "t": "Soco esticado", "x": "O braço estica até o inimigo."}, {"v": "video/golpe_CapitaoBorracha_especial.mp4", "p": "video/golpe_CapitaoBorracha_especial.jpg", "t": "Metralhadora", "x": "Uma rajada de socos esticados de uma vez."}]}]}, "SoldadoPoEspada": {"nome": "Soldado Pó", "cor": "#3a3a48", "selo": "Farm · espada", "anime": "Go! Go! Loser Ranger!", "formas": [{"rot": "Normal", "foto": "img/SoldadoPoEspada.webp", "idle": "video/idle_SoldadoPoEspada.mp4", "esp": "Corte de espada", "ini": 0, "golpes": [{"v": "video/golpe_SoldadoPoEspada_golpe.mp4", "p": "video/golpe_SoldadoPoEspada_golpe.jpg", "t": "Corte de espada", "x": "Ataque normal contra a sua equipe."}, {"v": "video/golpe_SoldadoPoEspada_morte.mp4", "p": "video/golpe_SoldadoPoEspada_morte.jpg", "t": "Vira pó", "x": "Igual no anime: desmancha em pó."}]}]}, "SoldadoPoPistola": {"nome": "Soldado Pó Atirador", "cor": "#3a3a48", "selo": "Farm · pistola", "anime": "Go! Go! Loser Ranger!", "formas": [{"rot": "Normal", "foto": "img/SoldadoPoPistola.webp", "idle": "video/idle_SoldadoPoPistola.mp4", "esp": "Rajada de tiros", "ini": 0, "golpes": [{"v": "video/golpe_SoldadoPoPistola_golpe.mp4", "p": "video/golpe_SoldadoPoPistola_golpe.jpg", "t": "Rajada de tiros", "x": "Ataque normal contra a sua equipe."}, {"v": "video/golpe_SoldadoPoPistola_morte.mp4", "p": "video/golpe_SoldadoPoPistola_morte.jpg", "t": "Vira pó", "x": "Igual no anime: desmancha em pó."}]}]}, "GuardiaoVermelho": {"nome": "Guardião Vermelho", "cor": "#ff2d2d", "selo": "Elite · espada", "anime": "Go! Go! Loser Ranger!", "formas": [{"rot": "Normal", "foto": "img/GuardiaoVermelho.webp", "idle": "video/idle_GuardiaoVermelho.mp4", "esp": "Dragão Orochi", "ini": 2, "golpes": [{"v": "video/golpe_GuardiaoVermelho_entrada.mp4", "p": "video/golpe_GuardiaoVermelho_entrada.jpg", "t": "Entrada de herói", "x": "Aparece com pose de herói e explosões atrás, como no seriado."}, {"v": "video/golpe_GuardiaoVermelho_golpe.mp4", "p": "video/golpe_GuardiaoVermelho_golpe.jpg", "t": "Corte de espada", "x": "Ataque normal contra a sua equipe."}, {"v": "video/golpe_GuardiaoVermelho_especial.mp4", "p": "video/golpe_GuardiaoVermelho_especial.jpg", "t": "Dragão Orochi", "x": "Levanta a espada e solta um dragão de energia que rasga tudo em linha."}, {"v": "video/golpe_GuardiaoVermelho_morte.mp4", "p": "video/golpe_GuardiaoVermelho_morte.jpg", "t": "Derrotado", "x": "Explode na cor dele."}]}]}, "GuardiaoAzul": {"nome": "Guardião Azul", "cor": "#3c78ff", "selo": "Elite · lança", "anime": "Go! Go! Loser Ranger!", "formas": [{"rot": "Normal", "foto": "img/GuardiaoAzul.webp", "idle": "video/idle_GuardiaoAzul.mp4", "esp": "Onda de água", "ini": 2, "golpes": [{"v": "video/golpe_GuardiaoAzul_entrada.mp4", "p": "video/golpe_GuardiaoAzul_entrada.jpg", "t": "Entrada de herói", "x": "Aparece com pose de herói e explosões atrás, como no seriado."}, {"v": "video/golpe_GuardiaoAzul_golpe.mp4", "p": "video/golpe_GuardiaoAzul_golpe.jpg", "t": "Estocada de lança", "x": "Ataque normal contra a sua equipe."}, {"v": "video/golpe_GuardiaoAzul_especial.mp4", "p": "video/golpe_GuardiaoAzul_especial.jpg", "t": "Onda de água", "x": "Junta força e explode uma onda de água em volta de si."}, {"v": "video/golpe_GuardiaoAzul_morte.mp4", "p": "video/golpe_GuardiaoAzul_morte.jpg", "t": "Derrotado", "x": "Explode na cor dele."}]}]}, "GuardiaoAmarelo": {"nome": "Guardião Amarelo", "cor": "#ffd228", "selo": "Elite · arco", "anime": "Go! Go! Loser Ranger!", "formas": [{"rot": "Normal", "foto": "img/GuardiaoAmarelo.webp", "idle": "video/idle_GuardiaoAmarelo.mp4", "esp": "Chuva de raios", "ini": 2, "golpes": [{"v": "video/golpe_GuardiaoAmarelo_entrada.mp4", "p": "video/golpe_GuardiaoAmarelo_entrada.jpg", "t": "Entrada de herói", "x": "Aparece com pose de herói e explosões atrás, como no seriado."}, {"v": "video/golpe_GuardiaoAmarelo_golpe.mp4", "p": "video/golpe_GuardiaoAmarelo_golpe.jpg", "t": "Flecha de raio", "x": "Ataque normal contra a sua equipe."}, {"v": "video/golpe_GuardiaoAmarelo_especial.mp4", "p": "video/golpe_GuardiaoAmarelo_especial.jpg", "t": "Chuva de raios", "x": "Mira pro céu e raios caem em cima das suas unidades."}, {"v": "video/golpe_GuardiaoAmarelo_morte.mp4", "p": "video/golpe_GuardiaoAmarelo_morte.jpg", "t": "Derrotado", "x": "Explode na cor dele."}]}]}, "GuardiaoVerde": {"nome": "Guardião Verde", "cor": "#3cc850", "selo": "Elite · martelo", "anime": "Go! Go! Loser Ranger!", "formas": [{"rot": "Normal", "foto": "img/GuardiaoVerde.webp", "idle": "video/idle_GuardiaoVerde.mp4", "esp": "Gigante", "ini": 2, "golpes": [{"v": "video/golpe_GuardiaoVerde_entrada.mp4", "p": "video/golpe_GuardiaoVerde_entrada.jpg", "t": "Entrada de herói", "x": "Aparece com pose de herói e explosões atrás, como no seriado."}, {"v": "video/golpe_GuardiaoVerde_golpe.mp4", "p": "video/golpe_GuardiaoVerde_golpe.jpg", "t": "Martelada", "x": "Ataque normal contra a sua equipe."}, {"v": "video/golpe_GuardiaoVerde_especial.mp4", "p": "video/golpe_GuardiaoVerde_especial.jpg", "t": "Gigante", "x": "Cresce, fica gigante e bate o martelo no chão com o dobro de dano."}, {"v": "video/golpe_GuardiaoVerde_morte.mp4", "p": "video/golpe_GuardiaoVerde_morte.jpg", "t": "Derrotado", "x": "Explode na cor dele."}]}]}, "GuardiaoRosa": {"nome": "Guardiã Rosa", "cor": "#ff64aa", "selo": "Elite · botas", "anime": "Go! Go! Loser Ranger!", "formas": [{"rot": "Normal", "foto": "img/GuardiaoRosa.webp", "idle": "video/idle_GuardiaoRosa.mp4", "esp": "Voadora", "ini": 2, "golpes": [{"v": "video/golpe_GuardiaoRosa_entrada.mp4", "p": "video/golpe_GuardiaoRosa_entrada.jpg", "t": "Entrada de herói", "x": "Aparece com pose de herói e explosões atrás, como no seriado."}, {"v": "video/golpe_GuardiaoRosa_golpe.mp4", "p": "video/golpe_GuardiaoRosa_golpe.jpg", "t": "Chutes", "x": "Ataque normal contra a sua equipe."}, {"v": "video/golpe_GuardiaoRosa_especial.mp4", "p": "video/golpe_GuardiaoRosa_especial.jpg", "t": "Voadora", "x": "Voa até a unidade com um chute. Quando está machucada, se cura."}, {"v": "video/golpe_GuardiaoRosa_morte.mp4", "p": "video/golpe_GuardiaoRosa_morte.jpg", "t": "Derrotado", "x": "Explode na cor dele."}]}]}};</script>
 <script>
 var CAMP = window.CAMP_DATA;
 function formaIdle(card, i) { // troca a forma no card: vídeo do parado (ou foto) e nome do especial
@@ -247,7 +314,7 @@ function abreFicha(u, f) {
   lg.innerHTML = d.golpes.map(function (g, k) { return '<button class="gbtn" data-g="' + k + '"><b>▶ ' + g.t + '</b><span>' + g.x + '</span></button>'; }).join('');
   lg.querySelectorAll('.gbtn').forEach(function (b) { b.onclick = function () { tocaGolpe(u, f, +b.dataset.g); }; });
   if (!dlg.open) dlg.showModal();
-  tocaGolpe(u, f, d.golpes.length > 1 ? d.golpes.length - 1 : 0); // começa pelo especial
+  tocaGolpe(u, f, d.ini != null ? d.ini : (d.golpes.length > 1 ? d.golpes.length - 1 : 0)); // começa pelo especial
 }
 document.querySelectorAll('.camp').forEach(function (card) {
   card.querySelectorAll('.forma').forEach(function (b) { b.addEventListener('click', function () { formaIdle(card, +b.dataset.f); }); });
