@@ -50,8 +50,28 @@ section{padding:56px 0}
 .campeoes{background:linear-gradient(180deg,var(--ceu2),var(--fundo))}
 .lista-camp{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
 .camp{background:var(--card);border:3px solid var(--borda);border-radius:22px;box-shadow:var(--sombra);overflow:hidden;display:grid;grid-template-rows:auto 1fr}
-.camp-foto{background:radial-gradient(circle at 50% 70%,color-mix(in srgb,var(--cor) 45%,#fff) 0,#fff 70%);display:flex;justify-content:center;padding:14px 0 0;height:300px}
-.camp-foto img{height:100%;width:auto;object-fit:contain;transition:opacity .15s}
+.camp-foto{all:unset;box-sizing:border-box;position:relative;display:block;width:100%;aspect-ratio:4/5;max-height:420px;background:#241d52;cursor:pointer;overflow:hidden}
+.camp-foto video,.camp-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.camp-foto img{object-fit:contain;background:radial-gradient(circle at 50% 70%,color-mix(in srgb,var(--cor) 45%,#fff) 0,#fff 70%)}
+.camp-foto:focus-visible{outline:3px solid var(--lar);outline-offset:-3px}
+.play{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:var(--ama);color:var(--tinta);font-weight:800;font-size:15px;padding:8px 16px;border-radius:99px;border:3px solid var(--borda);box-shadow:3px 3px 0 var(--borda);white-space:nowrap}
+.camp-foto:hover .play{transform:translateX(-50%) translateY(-2px)}
+/* ficha com os golpes */
+.ficha{border:3px solid var(--borda);border-radius:22px;padding:0;width:min(760px,calc(100% - 24px));max-height:calc(100% - 24px);background:var(--card);color:var(--tinta);box-shadow:6px 6px 0 var(--borda)}
+.ficha::backdrop{background:rgba(20,16,60,.7)}
+.ficha-topo{display:flex;align-items:center;gap:12px;padding:14px 16px 10px}
+.ficha-topo h3{font-size:clamp(24px,5vw,32px);margin:4px 0 0}
+.fechar{margin-left:auto;align-self:flex-start;font:800 22px Nunito,sans-serif;width:44px;height:44px;border-radius:12px;border:3px solid var(--borda);background:#fff;cursor:pointer;color:var(--tinta)}
+.palco{position:relative;background:#241d52;aspect-ratio:16/9}
+.palco video{width:100%;height:100%;display:block}
+.ficha-corpo{padding:12px 16px 18px}
+.ficha .formas{margin:0 0 12px}
+.lista-golpes{display:grid;gap:8px}
+.gbtn{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:2px;padding:10px 14px;border:2px solid var(--borda);border-radius:14px;background:#fff}
+.gbtn b{font-family:"Lilita One",sans-serif;font-weight:400;font-size:19px}
+.gbtn span{color:var(--suave);font-size:14px}
+.gbtn.on{background:color-mix(in srgb,var(--cor) 35%,#fff)}
+.gbtn:focus-visible{outline:3px solid var(--lar)}
 .camp-info{padding:16px 18px 20px;border-top:3px solid var(--borda)}
 .selo{display:inline-block;background:var(--cor);color:var(--tinta);font-size:13px;font-weight:800;padding:2px 10px;border-radius:99px;border:2px solid var(--borda)}
 .camp h3{font-size:28px;margin:10px 0 0}
@@ -108,27 +128,27 @@ footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3
 
 <section class="campeoes"><div class="wrap">
   <h2 class="tit">Campeões</h2>
-  <p class="sub">Toque nas formas pra ver cada despertar.</p>
-  <div class="lista-camp"><article class="camp" style="--cor:#ffc31e">
-  <div class="camp-foto"><img src="img/Kakaroto.webp" alt="Kakaroto Saiyajin" width="360" height="450" loading="lazy"></div>
+  <p class="sub">Toque no personagem pra ver os golpes.</p>
+  <div class="lista-camp"><article class="camp" style="--cor:#ffc31e" data-u="Kakaroto">
+  <button class="camp-foto" aria-label="Ver os golpes de Kakaroto Saiyajin"><video src="video/idle_Kakaroto.mp4" poster="video/idle_Kakaroto.jpg" autoplay muted loop playsinline preload="auto" aria-label="Kakaroto Saiyajin parado"></video><span class="play">▶ Ver golpes</span></button>
   <div class="camp-info">
     <span class="selo">Lendário · DPS</span>
     <h3>Kakaroto Saiyajin</h3>
     <p class="anime">Dragon Ball</p>
     <p class="golpe">Especial: <b>Genki Dama</b></p>
-    <p class="desp">3 despertares: troca o visual e o golpe</p><div class="formas" role="group" aria-label="Formas"><button class="forma on" data-img="img/Kakaroto.webp" data-golpe="Genki Dama" aria-pressed="true">Normal</button><button class="forma" data-img="img/Kakaroto_SSJ.webp" data-golpe="Kamehameha" aria-pressed="false">SSJ</button><button class="forma" data-img="img/Kakaroto_SS3.webp" data-golpe="Super Kamehameha" aria-pressed="false">SS3</button><button class="forma" data-img="img/Kakaroto_SS4.webp" data-golpe="Kamehameha do Dragão" aria-pressed="false">SS4</button></div>
+    <div class="formas" role="group" aria-label="Formas"><button class="forma on" data-f="0" aria-pressed="true">Normal</button><button class="forma" data-f="1" aria-pressed="false">SSJ</button><button class="forma" data-f="2" aria-pressed="false">SS3</button><button class="forma" data-f="3" aria-pressed="false">SS4</button></div>
   </div>
-</article><article class="camp" style="--cor:#ffc31e">
-  <div class="camp-foto"><img src="img/CeifadorSubstituto.webp" alt="Ceifador Substituto" width="360" height="450" loading="lazy"></div>
+</article><article class="camp" style="--cor:#ffc31e" data-u="CeifadorSubstituto">
+  <button class="camp-foto" aria-label="Ver os golpes de Ceifador Substituto"><video src="video/idle_CeifadorSubstituto.mp4" poster="video/idle_CeifadorSubstituto.jpg" autoplay muted loop playsinline preload="auto" aria-label="Ceifador Substituto parado"></video><span class="play">▶ Ver golpes</span></button>
   <div class="camp-info">
     <span class="selo">Lendário · DPS</span>
     <h3>Ceifador Substituto</h3>
     <p class="anime">Bleach</p>
     <p class="golpe">Especial: <b>Getsuga Tenshou</b></p>
-    <p class="desp">1 despertar: troca o visual e o golpe</p><div class="formas" role="group" aria-label="Formas"><button class="forma on" data-img="img/CeifadorSubstituto.webp" data-golpe="Getsuga Tenshou" aria-pressed="true">Normal</button><button class="forma" data-img="img/CeifadorSubstituto_Mascara.webp" data-golpe="Getsuga Negro" aria-pressed="false">Mascarado</button></div>
+    <div class="formas" role="group" aria-label="Formas"><button class="forma on" data-f="0" aria-pressed="true">Normal</button><button class="forma" data-f="1" aria-pressed="false">Mascarado</button></div>
   </div>
-</article><article class="camp" style="--cor:#af55ff">
-  <div class="camp-foto"><img src="img/CapitaoBorracha.webp" alt="Capitão de Borracha" width="360" height="450" loading="lazy"></div>
+</article><article class="camp" style="--cor:#af55ff" data-u="CapitaoBorracha">
+  <button class="camp-foto" aria-label="Ver os golpes de Capitão de Borracha"><video src="video/idle_CapitaoBorracha.mp4" poster="video/idle_CapitaoBorracha.jpg" autoplay muted loop playsinline preload="auto" aria-label="Capitão de Borracha parado"></video><span class="play">▶ Ver golpes</span></button>
   <div class="camp-info">
     <span class="selo">Épico · DPS</span>
     <h3>Capitão de Borracha</h3>
@@ -190,17 +210,53 @@ footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3
   BuKatum · jogo em teste no Roblox<br>
   Feito por fã: personagens inspirados em animes, sem ligação oficial.
 </div></footer>
+<dialog class="ficha" id="ficha" aria-label="Golpes">
+  <div class="ficha-topo"><div><span class="selo"></span><h3></h3></div><button class="fechar" aria-label="Fechar">✕</button></div>
+  <div class="palco"><video muted playsinline preload="auto"></video></div>
+  <div class="ficha-corpo"><div class="formas" role="group" aria-label="Formas"></div><div class="lista-golpes"></div></div>
+</dialog>
+<script>window.CAMP_DATA = {"Kakaroto": {"nome": "Kakaroto Saiyajin", "cor": "#ffc31e", "selo": "Lendário · DPS", "anime": "Dragon Ball", "formas": [{"rot": "Normal", "foto": "img/Kakaroto.webp", "idle": "video/idle_Kakaroto.mp4", "esp": "Genki Dama", "golpes": [{"v": "video/golpe_Kakaroto_combo.mp4", "p": "video/golpe_Kakaroto_combo.jpg", "t": "Combo + Genki Dama", "x": "Socos, golpe de ki e Kamehameha pequeno. Cada golpe enche a barra; cheia, ele pula e solta a Genki Dama."}]}, {"rot": "SSJ", "foto": "img/Kakaroto_SSJ.webp", "idle": "video/idle_Kakaroto_SSJ.mp4", "esp": "Kamehameha", "golpes": [{"v": "video/golpe_Kakaroto_SSJ_especial.mp4", "p": "video/golpe_Kakaroto_SSJ_especial.jpg", "t": "Kamehameha", "x": "Pula, carrega com as mãos do lado e solta o Kamehameha lá de cima."}]}, {"rot": "SS3", "foto": "img/Kakaroto_SS3.webp", "idle": "video/idle_Kakaroto_SS3.mp4", "esp": "Super Kamehameha", "golpes": [{"v": "video/golpe_Kakaroto_SS3_especial.mp4", "p": "video/golpe_Kakaroto_SS3_especial.jpg", "t": "Super Kamehameha", "x": "Um feixe bem mais largo, que segura por quase 2 segundos."}]}, {"rot": "SS4", "foto": "img/Kakaroto_SS4.webp", "idle": "video/idle_Kakaroto_SS4.mp4", "esp": "Kamehameha do Dragão", "golpes": [{"v": "video/golpe_Kakaroto_SS4_especial.mp4", "p": "video/golpe_Kakaroto_SS4_especial.jpg", "t": "Kamehameha do Dragão", "x": "Feixe vermelho com um dragão verde enrolado em volta."}]}]}, "CeifadorSubstituto": {"nome": "Ceifador Substituto", "cor": "#ffc31e", "selo": "Lendário · DPS", "anime": "Bleach", "formas": [{"rot": "Normal", "foto": "img/CeifadorSubstituto.webp", "idle": "video/idle_CeifadorSubstituto.mp4", "esp": "Getsuga Tenshou", "golpes": [{"v": "video/golpe_CeifadorSubstituto_golpe.mp4", "p": "video/golpe_CeifadorSubstituto_golpe.jpg", "t": "Corte em onda", "x": "Um corte que vira onda e acerta quem estiver na frente."}, {"v": "video/golpe_CeifadorSubstituto_especial.mp4", "p": "video/golpe_CeifadorSubstituto_especial.jpg", "t": "Getsuga Tenshou", "x": "Uma meia-lua gigante que corta tudo na linha."}]}, {"rot": "Mascarado", "foto": "img/CeifadorSubstituto_Mascara.webp", "idle": "video/idle_CeifadorSubstituto_Mascara.mp4", "esp": "Getsuga Negro", "golpes": [{"v": "video/golpe_CeifadorSubstituto_Mascara_especial.mp4", "p": "video/golpe_CeifadorSubstituto_Mascara_especial.jpg", "t": "Getsuga Negro", "x": "Meia-lua dupla, preta e vermelha."}]}]}, "CapitaoBorracha": {"nome": "Capitão de Borracha", "cor": "#af55ff", "selo": "Épico · DPS", "anime": "One Piece", "formas": [{"rot": "Normal", "foto": "img/CapitaoBorracha.webp", "idle": "video/idle_CapitaoBorracha.mp4", "esp": "Metralhadora", "golpes": [{"v": "video/golpe_CapitaoBorracha_golpe.mp4", "p": "video/golpe_CapitaoBorracha_golpe.jpg", "t": "Soco esticado", "x": "O braço estica até o inimigo."}, {"v": "video/golpe_CapitaoBorracha_especial.mp4", "p": "video/golpe_CapitaoBorracha_especial.jpg", "t": "Metralhadora", "x": "Uma rajada de socos esticados de uma vez."}]}]}};</script>
 <script>
-document.querySelectorAll('.camp').forEach(function(c){
-  var img=c.querySelector('.camp-foto img'), golpe=c.querySelector('.golpe b');
-  c.querySelectorAll('.forma').forEach(function(b){
-    b.addEventListener('click',function(){
-      c.querySelectorAll('.forma').forEach(function(o){o.classList.remove('on');o.setAttribute('aria-pressed','false')});
-      b.classList.add('on');b.setAttribute('aria-pressed','true');
-      img.src=b.dataset.img;golpe.textContent=b.dataset.golpe;
-    });
-  });
+var CAMP = window.CAMP_DATA;
+function formaIdle(card, i) { // troca a forma no card: vídeo do parado (ou foto) e nome do especial
+  var d = CAMP[card.dataset.u].formas[i], box = card.querySelector('.camp-foto'), m = box.querySelector('video,img');
+  card.dataset.f = i;
+  card.querySelectorAll('.forma').forEach(function (b) { var on = +b.dataset.f === i; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
+  card.querySelector('.golpe b').textContent = d.esp;
+  if (d.idle) {
+    if (m.tagName !== 'VIDEO') { var v = document.createElement('video'); v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true; v.setAttribute('playsinline', ''); m.replaceWith(v); m = v; }
+    m.poster = d.idle.replace('.mp4', '.jpg'); m.src = d.idle; m.play().catch(function () {});
+  } else if (m.tagName === 'IMG') m.src = d.foto;
+}
+var dlg = document.getElementById('ficha'), palco = dlg.querySelector('.palco video');
+function tocaGolpe(u, f, g) {
+  var d = CAMP[u].formas[f], gp = d.golpes[g];
+  dlg.querySelectorAll('.gbtn').forEach(function (b, k) { b.classList.toggle('on', k === g); b.setAttribute('aria-pressed', k === g); });
+  palco.poster = gp.p; palco.src = gp.v; palco.play().catch(function () {});
+}
+function abreFicha(u, f) {
+  var c = CAMP[u], d = c.formas[f];
+  if (!d.golpes.length) { f = c.formas.findIndex(function (x) { return x.golpes.length; }); if (f < 0) return; d = c.formas[f]; }
+  dlg.style.setProperty('--cor', c.cor);
+  dlg.querySelector('.selo').textContent = c.selo;
+  dlg.querySelector('h3').textContent = c.nome + (f ? ' · ' + d.rot : '');
+  var fs = dlg.querySelector('.ficha .formas');
+  fs.innerHTML = c.formas.length > 1 ? c.formas.map(function (x, i) { return x.golpes.length ? '<button class="forma' + (i === f ? ' on' : '') + '" data-f="' + i + '">' + x.rot + '</button>' : ''; }).join('') : '';
+  fs.querySelectorAll('.forma').forEach(function (b) { b.onclick = function () { abreFicha(u, +b.dataset.f); }; });
+  var lg = dlg.querySelector('.lista-golpes');
+  lg.innerHTML = d.golpes.map(function (g, k) { return '<button class="gbtn" data-g="' + k + '"><b>▶ ' + g.t + '</b><span>' + g.x + '</span></button>'; }).join('');
+  lg.querySelectorAll('.gbtn').forEach(function (b) { b.onclick = function () { tocaGolpe(u, f, +b.dataset.g); }; });
+  if (!dlg.open) dlg.showModal();
+  tocaGolpe(u, f, d.golpes.length > 1 ? d.golpes.length - 1 : 0); // começa pelo especial
+}
+document.querySelectorAll('.camp').forEach(function (card) {
+  card.querySelectorAll('.forma').forEach(function (b) { b.addEventListener('click', function () { formaIdle(card, +b.dataset.f); }); });
+  card.querySelector('.camp-foto').addEventListener('click', function () { abreFicha(card.dataset.u, +(card.dataset.f || 0)); });
 });
+palco.addEventListener('ended', function () { setTimeout(function () { if (dlg.open) { palco.currentTime = 0; palco.play().catch(function () {}); } }, 900); });
+dlg.querySelector('.fechar').onclick = function () { dlg.close(); };
+dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener('close', function () { palco.pause(); palco.removeAttribute('src'); palco.load(); });
 </script>
 </body>
 </html>
