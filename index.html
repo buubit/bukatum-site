@@ -124,6 +124,11 @@ section{padding:56px 0}
 .raids{background:linear-gradient(180deg,#fff2dc,var(--fundo))}
 .raid-fotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin:18px 0}
 .raid-fotos img{width:100%;aspect-ratio:8/7;object-fit:cover;border-radius:16px;border:3px solid var(--borda);box-shadow:var(--sombra)}
+.itens-raid{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px}
+.itens-raid li{background:#2b2f45;color:#fff;border:3px solid var(--borda);border-radius:18px;box-shadow:var(--sombra);padding:10px 12px 14px;display:grid;gap:4px;text-align:center}
+.itens-raid img{width:100%;max-width:150px;aspect-ratio:1;margin:0 auto;object-fit:cover;border-radius:12px}
+.itens-raid b{font-family:"Lilita One",sans-serif;font-weight:400;font-size:19px}
+.itens-raid span{font-size:13px;color:#cfd3ea}
 .mestre{display:flex;align-items:center;gap:16px;margin-top:22px;background:var(--card);border:3px solid var(--borda);border-radius:20px;box-shadow:var(--sombra);padding:12px 18px 12px 12px}
 .mestre img{width:110px;height:138px;object-fit:cover;border-radius:14px;background:#e6eaf6;flex:none}
 .mestre p{margin:0;display:grid;gap:4px;color:var(--suave)}
@@ -281,6 +286,8 @@ footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3
   <div class="raid-fotos"><img src="img/guilda_fora.webp" alt="A Guilda de Aventureiros" loading="lazy"><img src="img/guilda_dentro.webp" alt="O salão com a escadaria pro 2º andar" loading="lazy"><img src="img/guilda_bar.webp" alt="O bar de comida e bebida" loading="lazy"></div>
   <h3 class="raid-sub">Raid 1 · Torneio de Artes Marciais</h3>
   <div class="raid-fotos"><img src="img/torneio.webp" alt="A arena do Torneio de Artes Marciais" loading="lazy"><img src="img/torneio_tatame.webp" alt="O caminho em espiral no tatame" loading="lazy"></div>
+  <h3 class="raid-sub">Itens da raid</h3>
+  <ul class="itens-raid"><li><img src="img/item_esfera.webp" alt="Esfera do Dragão" loading="lazy"><b>Esfera do Dragão</b><span>Desperta o Super Saiyajin. Cai do nível 4 em diante.</span></li><li><img src="img/item_cauda.webp" alt="Cauda de Saiyajin" loading="lazy"><b>Cauda de Saiyajin</b><span>Desperta o Super Saiyajin 3. Cai do nível 7 em diante.</span></li><li><img src="img/item_lua.webp" alt="Fragmento da Lua" loading="lazy"><b>Fragmento da Lua</b><span>Desperta o Super Saiyajin 4. Só o chefe do nível 10+ deixa cair.</span></li><li><img src="img/item_selo.webp" alt="Selo do Guardião" loading="lazy"><b>Selo do Guardião</b><span>Desperta o Super Saiyajin 4. Cai dos Guardiões do Dragão nas áreas.</span></li><li><img src="img/item_ticket.webp" alt="Ticket de Raid" loading="lazy"><b>Ticket de Raid</b><span>Entrada das raids de ticket (em breve).</span></li></ul>
   <div class="mestre"><img src="img/makarov.webp" alt="Makarov, o mestre da guilda" loading="lazy"><p><b>Makarov</b>Makarov, o mestre da guilda, fica em cima do balcão do bar. Fale com ele pra ver as missões.</p></div>
 </div></section>
 
