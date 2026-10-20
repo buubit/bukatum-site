@@ -29,7 +29,7 @@ section{padding:56px 0}
 .tit{font-size:clamp(30px,6vw,44px);margin-bottom:6px}
 .sub{color:var(--suave);margin:0 0 24px;max-width:560px}
 /* topo */
-.hero{background:linear-gradient(180deg,#86c0fb,var(--fundo))}
+.hero{background:linear-gradient(180deg,#86c0fc 0,#86c0fc 55%,var(--fundo))}
 .hero img{width:100%;height:auto;max-width:1200px;margin:0 auto}
 .hero .wrap{padding-top:22px;padding-bottom:8px;text-align:center}
 .hero p{font-size:clamp(20px,3.6vw,26px);font-weight:800;max-width:620px;margin:0 auto 18px;line-height:1.3}
@@ -106,6 +106,25 @@ section{padding:56px 0}
 .npcs img{grid-row:span 2;width:72px;height:90px;object-fit:cover;object-position:50% 15%;border-radius:12px;background:#e6eaf6}
 .npcs b{font-family:"Lilita One",sans-serif;font-weight:400;font-size:21px;align-self:end}
 .npcs span{color:#c9c4ef;font-size:15px}
+/* logo animado no topo */
+.logo-vid{display:block;width:min(520px,92%);aspect-ratio:4/3;margin:0 auto -30px;object-fit:cover;border:0;background:transparent}
+/* áreas */
+.areas{display:grid;gap:22px}
+.area{background:var(--card);border:3px solid var(--borda);border-radius:22px;box-shadow:var(--sombra);overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.area-fotos{background:var(--cor);display:grid;gap:3px;grid-auto-rows:minmax(0,1fr)}
+.area-fotos img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
+.area-info{padding:18px 20px 20px}
+.area h3{font-size:28px;margin:4px 0 10px}
+.area-itens{margin:0;padding:0 0 0 18px;display:grid;gap:6px}
+.area-itens b{font-family:"Lilita One",sans-serif;font-weight:400;font-size:18px}
+.area-npcs{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.area-npcs figure{margin:0;width:96px;text-align:center;font-size:13px;font-weight:800}
+.area-npcs img{width:96px;height:120px;object-fit:cover;object-position:50% 20%;border-radius:12px;border:2px solid var(--borda);background:#eef2fb}
+/* raids */
+.raids{background:linear-gradient(180deg,#fff2dc,var(--fundo))}
+.raid-fotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin:18px 0}
+.raid-fotos img{width:100%;aspect-ratio:8/7;object-fit:cover;border-radius:16px;border:3px solid var(--borda);box-shadow:var(--sombra)}
+.raid-sub{font-family:"Lilita One",sans-serif;font-weight:400;font-size:24px;margin:26px 0 4px}
 footer{padding:28px 0 40px;text-align:center;color:var(--suave);font-size:14px}
 footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3px solid var(--borda)}
 @media (max-width:520px){section{padding:44px 0}.camp-foto{height:260px}.resumo{grid-template-columns:1fr 1fr;gap:12px}.resumo li{padding:14px}.resumo b{font-size:18px}.resumo span:last-child{font-size:14px}}
@@ -115,7 +134,8 @@ footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3
 <body>
 <header class="hero">
   <h1 class="so-leitor">BuKatum</h1>
-  <img src="img/banner.jpg" alt="BuKatum: Kakaroto, Ninja Laranja e Ceifador na frente da Raposa de Nove Caudas, com moedas voando" width="1200" height="675">
+  <div class="wrap" style="padding-top:18px"><video class="logo-vid" src="video/logo.mp4" poster="img/logo.webp" autoplay muted loop playsinline preload="auto" aria-label="Logo do BuKatum animado"></video></div>
+  <img src="img/banner_limpo.jpg" alt="Kakaroto, Ninja Laranja e Ceifador na frente da Raposa de Nove Caudas, com moedas voando" width="1200" height="675">
   <div class="wrap">
     <p>Monte sua equipe de lutadores de anime e domine o mundo.</p>
     <div class="btns"><span class="btn breve-btn">Em teste · em breve no Roblox</span></div>
@@ -125,7 +145,7 @@ footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3
 <section><div class="wrap">
   <h2 class="tit">Como é</h2>
   <p class="sub">Um mundo aberto no estilo Pet Simulator, com lutadores de anime no lugar dos pets.</p>
-  <ul class="resumo"><li><span class="ic" aria-hidden="true">⚔️</span><b>Sua equipe luta</b><span>Seus campeões te seguem, quebram moedas, caixas e baús e brigam com os inimigos do campo.</span></li><li><span class="ic" aria-hidden="true">🥚</span><b>Abra ovos</b><span>Gaste moedas pra ganhar lutadores Raros, Épicos e Lendários.</span></li><li><span class="ic" aria-hidden="true">👹</span><b>Vença os chefes</b><span>Soldados Pó de espada e pistola invadem o campo e batem de volta. Às vezes aparece um Guardião do Dragão (elite) que paga bem mais. Libere zonas novas e vença os chefes.</span></li><li><span class="ic" aria-hidden="true">✨</span><b>Desperte</b><span>Suba de nível, fortaleça os itens e transforme seu campeão numa forma nova.</span></li></ul>
+  <ul class="resumo"><li><span class="ic" aria-hidden="true">⚔️</span><b>Sua equipe luta</b><span>Seus campeões te seguem, quebram moedas, caixas e baús e brigam com os inimigos do campo.</span></li><li><span class="ic" aria-hidden="true">🥚</span><b>Abra ovos</b><span>Gaste moedas pra ganhar lutadores Raros, Épicos e Lendários.</span></li><li><span class="ic" aria-hidden="true">🗺️</span><b>Explore as áreas</b><span>Cada área é de um anime, com NPC, missões, um Guardião do Dragão de elite e um veículo pra seguir viagem.</span></li><li><span class="ic" aria-hidden="true">🏰</span><b>Raids com amigos</b><span>Na Guilda de Aventureiros você pega uma missão e defende o Troféu com até 4 amigos. 12 níveis e o Infinito.</span></li><li><span class="ic" aria-hidden="true">✨</span><b>Desperte</b><span>Suba de nível, junte os itens das raids e transforme seu campeão numa forma nova.</span></li></ul>
 </div></section>
 
 <section class="campeoes"><div class="wrap">
@@ -227,41 +247,38 @@ footer img{width:56px;height:56px;border-radius:14px;margin:0 auto 10px;border:3
 </article></div>
 </div></section>
 
-<section>
-  <div class="wrap"><h2 class="tit">O mundo</h2>
-  <p class="sub">5 zonas, cada uma com um chefe gigante e seu golpe especial. Arraste pro lado.</p></div>
-  <div class="rolar"><ul class="zonas"><li class="zona" style="--cor:#ff822d">
-  <div class="zona-foto"><img src="img/ImperadorGelido.webp" alt="Imperador Gélido" width="360" height="450" loading="lazy"></div>
-  <span class="num">Zona 1</span>
-  <h3>Vale dos Guerreiros</h3>
-  <p>Chefe: <b>Imperador Gélido</b></p>
-  <p class="dica">3 raios do dedo, cada um avisado por uma linha vermelha no chão. Saia da linha.</p>
-</li><li class="zona" style="--cor:#6ed25a">
-  <div class="zona-foto"><img src="img/RaposaNoveCaudas.webp" alt="Raposa de Nove Caudas" width="360" height="450" loading="lazy"></div>
-  <span class="num">Zona 2</span>
-  <h3>Vila da Folha</h3>
-  <p>Chefe: <b>Raposa de Nove Caudas</b></p>
-  <p class="dica">Carrega uma bola na boca e cospe 5 bolas de fogo nos círculos vermelhos.</p>
-</li><li class="zona" style="--cor:#50beff">
-  <div class="zona-foto"><img src="img/CapitaoBigodao.webp" alt="Capitão Bigodão" width="360" height="450" loading="lazy"></div>
-  <span class="num">Zona 3</span>
-  <h3>Porto Pirata</h3>
-  <p>Chefe: <b>Capitão Bigodão</b></p>
-  <p class="dica">Soco no ar que racha o chão: 3 ondas de terra. Pule pra desviar.</p>
-</li><li class="zona" style="--cor:#a569ff">
-  <div class="zona-foto"><img src="img/ReiMaldicoes.webp" alt="Rei das Maldições" width="360" height="450" loading="lazy"></div>
-  <span class="num">Zona 4</span>
-  <h3>Escola Jujutsu</h3>
-  <p>Chefe: <b>Rei das Maldições</b></p>
-  <p class="dica">5 linhas de corte cruzando a arena, com aviso vermelho antes.</p>
-</li><li class="zona" style="--cor:#ff7daa">
-  <div class="zona-foto"><img src="img/LuaSuperior.webp" alt="Lua Superior" width="360" height="450" loading="lazy"></div>
-  <span class="num">Zona 5</span>
-  <h3>Vila dos Caçadores</h3>
-  <p>Chefe: <b>Lua Superior</b></p>
-  <p class="dica">Pula alto e cai em cima de você. Saia do círculo vermelho.</p>
-</li></ul></div>
-</section>
+<section><div class="wrap">
+  <h2 class="tit">As áreas</h2>
+  <p class="sub">A infestação de Soldados Pó tomou os mundos dos animes. Vá limpando área por área.</p>
+  <div class="areas"><article class="area" style="--cor:#ffb3d9">
+  <div class="area-fotos"><img src="img/kaioh.webp" alt="O planetinha do Senhor Kaioh com as luas em volta" loading="lazy"></div>
+  <div class="area-info">
+    <span class="num">Área 1 · Dragon Ball</span>
+    <h3>Planeta do Senhor Kaioh</h3>
+    <ul class="area-itens"><li><b>Campos de farm</b> nas 3 luas em volta do planeta</li><li><b>Cápsula Saiyajin</b> a máquina de sortear ovos da área</li><li><b>Elite</b> Guardião Vermelho na ilhota do pilar</li><li><b>Veículo</b> o carro do Senhor Kaioh leva pra próxima área</li></ul>
+    
+  </div>
+</article><article class="area" style="--cor:#cfe3ff">
+  <div class="area-fotos"><img src="img/seireitei.webp" alt="A Seireitei: muralha branca, distritos e o portão" loading="lazy"><img src="img/seireitei_chao.webp" alt="Chegando na Seireitei" loading="lazy"></div>
+  <div class="area-info">
+    <span class="num">Área 2 · Bleach</span>
+    <h3>Seireitei</h3>
+    <ul class="area-itens"><li><b>Jidanbō</b> o porteiro gigante dá as missões e abre o portão</li><li><b>Kūkaku Shiba</b> o canhão Kakaku Taihō lança você na ilhota do elite</li><li><b>Elite</b> Guardião Azul na ilhota</li><li><b>Veículo</b> a liteira voadora segue viagem</li></ul>
+    <div class="area-npcs"><figure><img src="img/jidanbo.webp" alt="Jidanbō" loading="lazy"><figcaption>Jidanbō</figcaption></figure><figure><img src="img/kukaku.webp" alt="Kūkaku Shiba" loading="lazy"><figcaption>Kūkaku Shiba</figcaption></figure><figure><img src="img/liteira.webp" alt="Liteira voadora" loading="lazy"><figcaption>Liteira voadora</figcaption></figure></div>
+  </div>
+</article></div>
+</div></section>
+
+<section class="raids"><div class="wrap">
+  <h2 class="tit">Raids</h2>
+  <p class="sub">Um andar da Aincrad virou a Guilda de Aventureiros. Pegue uma missão no quadro, chame os amigos e defenda o Troféu do Campeão.</p>
+  <ul class="resumo"><li><span class="ic" aria-hidden="true">📋</span><b>Aceite no quadro</b><span>Você vai direto pro círculo da sala, a porta abre e o grupo espera 5 segundos pelos amigos (até 4).</span></li><li><span class="ic" aria-hidden="true">🌀</span><b>Espiral de 4 voltas</b><span>Os inimigos saem da Esfera do Dragão e rodam o tatame do Torneio até o centro.</span></li><li><span class="ic" aria-hidden="true">🦅</span><b>Chão e ponto alto</b><span>Uns inimigos andam, outros voam. Só unidade em ponto alto acerta quem voa.</span></li><li><span class="ic" aria-hidden="true">❤️</span><b>3 vidas</b><span>12 níveis com 15 ondas e um chefe na última. Passou do 12? Abre o Infinito, com 1 vida só.</span></li><li><span class="ic" aria-hidden="true">🎁</span><b>Prêmios</b><span>Moedas, gemas, tickets e os itens que despertam o Kakaroto até o Super Saiyajin 4.</span></li></ul>
+  <h3 class="raid-sub">A Guilda de Aventureiros</h3>
+  <div class="raid-fotos"><img src="img/guilda_fora.webp" alt="A Guilda de Aventureiros" loading="lazy"><img src="img/guilda_dentro.webp" alt="O salão com a escadaria pro 2º andar" loading="lazy"><img src="img/guilda_bar.webp" alt="O bar de comida e bebida" loading="lazy"></div>
+  <h3 class="raid-sub">Raid 1 · Torneio de Artes Marciais</h3>
+  <div class="raid-fotos"><img src="img/torneio.webp" alt="A arena do Torneio de Artes Marciais" loading="lazy"><img src="img/torneio_tatame.webp" alt="O caminho em espiral no tatame" loading="lazy"></div>
+  <p class="breve">Makarov, o mestre da guilda, chega em breve.</p>
+</div></section>
 
 <section class="base"><div class="wrap">
   <h2 class="tit">A base no céu</h2>
